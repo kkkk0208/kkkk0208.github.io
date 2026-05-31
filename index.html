@@ -28,9 +28,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="FiveDay" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
   </head>
 
   <body>
@@ -40,11 +40,11 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/_expo/static/js/web/AppEntry-cd2b5a5b33e5fc39a4914c280d62768c.js" defer></script>
+  <script src="./_expo/static/js/web/AppEntry-cd2b5a5b33e5fc39a4914c280d62768c.js" defer></script>
   <script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
-    navigator.serviceWorker.register("/service-worker.js").catch(function () {});
+    navigator.serviceWorker.register("./service-worker.js").catch(function () {});
   });
 }
 </script>

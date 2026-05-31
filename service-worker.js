@@ -1,14 +1,15 @@
 const CACHE_NAME = "fiveday-mobile-v1";
+const APP_ROOT = new URL("./", self.registration.scope).pathname;
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) =>
       cache.addAll([
-        "/",
-        "/manifest.webmanifest",
-        "/icons/icon-192.png",
-        "/icons/icon-512.png",
-        "/icons/apple-touch-icon.png",
+        "./",
+        "./manifest.webmanifest",
+        "./icons/icon-192.png",
+        "./icons/icon-512.png",
+        "./icons/apple-touch-icon.png",
       ]),
     ),
   );
@@ -27,6 +28,6 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request).then((cached) => cached || caches.match("/"))),
+    fetch(event.request).catch(() => caches.match(event.request).then((cached) => cached || caches.match(APP_ROOT))),
   );
 });
