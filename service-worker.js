@@ -1,4 +1,4 @@
-const CACHE_NAME = "fiveday-mobile-v1";
+const CACHE_NAME = "fiveday-mobile-v2";
 const APP_ROOT = new URL("./", self.registration.scope).pathname;
 
 self.addEventListener("install", (event) => {
